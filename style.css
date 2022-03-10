@@ -1,3 +1,67 @@
-:root{
-    --fuente:font-family: 'Roboto Mono', monospace;
+html{
+    font-size: 62.5%;
+}
+*{
+    font-family:Roboto Mono', monospace';
+    color:#fff;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color: #c96a6a;
+}
+.conteiner{
+    /**para que quede centrada en el medio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;/**que tome el largo total*/
+}
+.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);/*creo 4 columnas con un ancho total de 8rem 80px*/
+    grid-template-rows:16rem repeat(5, 8rem);/*le doy el largo de los botones al primera ilera le doy 16 rem al resto 8rem*/
+    background-color:#4d4dc2;
+    padding: 1rem;
+    border-radius: 3rem;
+    box-shadow: 1.5rem 1rem 0px 5px #00000033;
+}
+button{
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #4d4dc2;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f; /**sobras a los botones*/
+}
+button:active{
+    background-color: #e98708;/**al clickear el boton cambia el backgrpund*/
+}
+button:focus{
+    outline: none;
+}
+.col-2{
+    grid-column: span 2;/**con esto le decimos que el boton se expanda a dos columnas*/
+}
+.display{
+    grid-column: 1 / -1; /**usamos grid tempple column para que use el ancho total*/
+    padding: 2rem;
+    display: flex;
+    margin: 1rem 1rem 2rem;
+    flex-direction: column;
+    align-items: flex-end;/* lo tiramos a la derecha*/
+    background-color:#363636 ;
+    border-radius: 3rem;
+    text-align: right;
+    justify-content: space-between;/**para q se sapren los valores*/
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+#valor-actual{
+    font-size: 2rem;
+}
+#valor-anterior{
+    font-size: 2.5rem;
 }
