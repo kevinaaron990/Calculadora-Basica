@@ -10,6 +10,12 @@ body{
     margin: 0;
     background-color: #c96a6a;
 }
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    
+}
 .conteiner{
     /**para que quede centrada en el medio */
     display: flex;
